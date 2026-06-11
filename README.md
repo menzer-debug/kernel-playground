@@ -56,3 +56,8 @@ This repository is designed to facilitate customizing the Linux kernel, building
 ---
 
 *For further assistance or questions, refer to the individual README files within each folder.*
+
+## Student Projects
+
+### E5 — Port Scanner Detector (eBPF/XDP)
+See [src/c/e5-port-scanner/README.md](src/c/e5-port-scanner/README.md) for full documentation.
