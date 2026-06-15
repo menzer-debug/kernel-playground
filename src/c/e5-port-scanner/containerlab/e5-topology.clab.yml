@@ -1,0 +1,37 @@
+name: e5-lab
+
+topology:
+  nodes:
+    hs1:
+      kind: linux
+      image: ubuntu:24.04
+      exec:
+        - apt-get update -qq
+        - apt-get install -y -qq iproute2 nmap iputils-ping
+        - ip addr add 10.0.1.10/24 dev eth1
+        - ip route add 10.0.2.0/24 via 10.0.1.1
+
+    rt1:
+      kind: linux
+      image: ubuntu:24.04
+      binds:
+        - ../:/e5-port-scanner
+      exec:
+        - apt-get update -qq
+        - apt-get install -y -qq iproute2 clang llvm libelf-dev libbpf-dev make gcc
+        - sysctl -w net.ipv4.ip_forward=1
+        - ip addr add 10.0.1.1/24 dev eth1
+        - ip addr add 10.0.2.1/24 dev eth2
+
+    hs2:
+      kind: linux
+      image: ubuntu:24.04
+      exec:
+        - apt-get update -qq
+        - apt-get install -y -qq iproute2 iputils-ping
+        - ip addr add 10.0.2.10/24 dev eth1
+        - ip route add 10.0.1.0/24 via 10.0.2.1
+
+  links:
+    - endpoints: ["hs1:eth1", "rt1:eth1"]
+    - endpoints: ["hs2:eth1", "rt1:eth2"]

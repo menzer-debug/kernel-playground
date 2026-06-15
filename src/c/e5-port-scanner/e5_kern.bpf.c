@@ -111,9 +111,8 @@ int port_scanner_detect(struct xdp_md *ctx)
                             &info->window_start_ns, BPF_ANY);
         info->unique_port_count++;
 
-        bpf_printk("[E5] SYN %x -> port %d [unique:%llu total:%llu]\n",
-                   bpf_ntohl(src_ip), dst_port,
-                   info->unique_port_count, info->total_syns);
+        bpf_printk("[E5] SYN %x -> port %d\n",
+           bpf_ntohl(src_ip), dst_port);
     }
 
     if (info->unique_port_count >= PORT_SCAN_THRESHOLD) {
