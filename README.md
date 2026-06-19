@@ -1,4 +1,4 @@
-# Project Overview (GO END OF THE REAM ME SO FIND MY ALL WORK. Google DOC is for your detailed explanation. PLEASE DON'T READ ONLY READ ME PART.)
+# Project Overview (GO END OF THE READ ME SO FIND MY ALL WORK. Google DOC is for your detailed explanation. PLEASE DON'T READ ONLY READ ME PART.)
 
 This repository provides tools and resources for customizing and building a Linux kernel with a focus on packet filtering using the Netfilter subsystem. It also includes scripts and configurations for setting up a testing environment within virtual machines.
 
