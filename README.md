@@ -1,4 +1,7 @@
-# Project Overview (GO END OF THE READ ME SO FIND MY ALL WORK. Google DOC is for your detailed explanation. PLEASE DON'T READ ONLY READ ME PART.)
+# Project Overview 
+
+
+> **Note for graders/reviewers:** This README documents the base `kernel-playground` infrastructure (kernel build, podman setup, VM testing). For my E5 — Port Scanner Detector project specifically, jump to the [Student Projects](#student-projects) section at the bottom of this file, or go directly to the [project folder](src/c/e5-port-scanner/) or the [Google Doc](https://docs.google.com/document/d/1P-KpenxOK_pVcWQKT31Ilx023x-Bg_0RadoE-mzqqHw/edit?usp=sharing) for the full report with code explanations and screenshots.
 
 This repository provides tools and resources for customizing and building a Linux kernel with a focus on packet filtering using the Netfilter subsystem. It also includes scripts and configurations for setting up a testing environment within virtual machines.
 
